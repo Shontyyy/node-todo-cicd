@@ -2,7 +2,7 @@ FROM alpine
 RUN apk update && apk upgrade
 RUN apk add nodejs
 RUN mkdir -p /app
-ADD app/package.json /app
+ADD . .
 WORKDIR /app/
 ENV HOME /app
 ENV NODE_ENV development
