@@ -1,5 +1,5 @@
 FROM node:latest
-RUN apt update && apk upgrade
+RUN apt update && apt upgrade
 RUN npm install
 RUN mkdir -p /app
 ADD . .
