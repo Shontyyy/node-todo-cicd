@@ -6,7 +6,6 @@ ADD . .
 WORKDIR /app/
 ENV HOME /app
 ENV NODE_ENV development
-RUN npm install
-ADD app /app    
+RUN npm install  
 EXPOSE 8000
 CMD npm start
