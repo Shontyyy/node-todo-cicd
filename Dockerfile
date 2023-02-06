@@ -1,7 +1,7 @@
 FROM readytalk/nodejs
 
 WORKDIR /app
-ADD . /app
+COPY . .
 
 RUN npm install
 RUN npm run test
