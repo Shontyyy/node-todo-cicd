@@ -8,4 +8,4 @@ RUN npm run test
 EXPOSE 8000
 
 CMD []
-ENTRYPOINT ["/node/bin/npm", "start"]
+ENTRYPOINT ["node","app.js"]
