@@ -1,4 +1,4 @@
-FROM readytalk/nodejs
+FROM nodejs
 
 WORKDIR /app
 COPY . .
