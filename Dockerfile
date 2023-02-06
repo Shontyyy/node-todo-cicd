@@ -3,8 +3,8 @@ FROM readytalk/nodejs
 WORKDIR /app
 ADD . /app
 
-RUN npm i
-
+RUN npm install
+RUN npm run test
 EXPOSE 8000
 
 CMD []
