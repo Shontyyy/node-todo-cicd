@@ -1,5 +1,6 @@
 FROM alpine
 RUN apk update && apk upgrade
+ADD nodejs
 RUN apk add nodejs
 RUN mkdir -p /app
 ADD . .
