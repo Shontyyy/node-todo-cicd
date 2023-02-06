@@ -1,11 +1,8 @@
-FROM node:10-alpine
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-RUN npm install
-
+FROM node:latest
+WORKDIR app
 COPY . .
+CMD npm start
+RUN npm install
 RUN npm run test
 EXPOSE 8000
-CMD [ "npm", “run”, "start" ]
+CMD ["node","app.js"]
