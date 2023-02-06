@@ -1,11 +1,11 @@
-FROM node:alpine
-RUN apk update && apk upgrade
-RUN apk add nodejs
-RUN mkdir -p /app
-ADD . .
-WORKDIR /app/
-ENV HOME /app
-ENV NODE_ENV development
-RUN npm install  
+FROM readytalk/nodejs
+
+WORKDIR /app
+ADD . /app
+
+RUN npm i
+
 EXPOSE 8000
-CMD npm start
+
+CMD []
+ENTRYPOINT ["/nodejs/bin/npm", "start"]
